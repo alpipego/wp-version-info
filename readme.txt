@@ -16,12 +16,12 @@ This plugin displays the current WordPress version number along with the followi
 * Web Server used
 * MySQL version
 
-= What's the reason =
-I always disliked the fact that WordPress does not display the current version number in the footer when there was a new release.
+= What's the reason for building this Plugin =
+I always disliked the fact that WordPress does not display the current version number in the footer whenever there is a new release.
 
 If you are a plugin developer and a user experiences a problem, they could install this plugin and send you a screenshot of their admin footer (or copy the text of course) to inform you about the cornerstones of their setup.
 
-I built this [Multivariate Virtual Machine for Debugging WordPress Plugin](https://github.com/alpipego/wp-version) that allows you to quickly change PHP versions, the used web server (Nginx or Apache) and WordPress core, plugin and theme versions.
+I built this [Multivariate Virtual Machine for Debugging WordPress Plugin](https://github.com/alpipego/wp-version) that allows you to quickly change PHP versions, the used web server (Nginx or Apache) and WordPress core, plugin and theme versions. As it is intended to quickly change environment variables, this plugin helped me keep track of what exactly I am testing at the moment.
 
 == Screenshots ==
 

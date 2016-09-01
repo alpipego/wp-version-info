@@ -4,7 +4,7 @@ Plugin Name: WordPress and Environment Version Number in Footer
 Plugin URI: https://wordpress.org/plugins/version-info
 Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 Author: alpipego
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://alpipego.com/
 */
 

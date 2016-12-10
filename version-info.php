@@ -23,7 +23,12 @@
 class VersionInfo {
 
 	public function __construct() {
+		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
 		add_filter( 'update_footer', array( $this, 'version_in_footer' ), 11 );
+	}
+
+	public function load_text_domain() {
+		load_plugin_textdomain( 'version-info' );
 	}
 
 	public function version_in_footer() {
@@ -34,7 +39,7 @@ class VersionInfo {
 		$mysql_server = explode( '-', mysqli_get_server_info( $mysqli ) );
 		$mysqli->close();
 
-		return sprintf( esc_attr__('You are running WordPress %s  | PHP %s | %s | MySQL %s', 'version-info'), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $mysql_server[0] );
+		return sprintf( esc_attr__( 'You are running WordPress %s  | PHP %s | %s | MySQL %s', 'version-info' ), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $mysql_server[0] );
 	}
 }
 

@@ -1,10 +1,10 @@
 === Version Info ===
 Contributors: alpipego
 Tags: admin, version, php, mysql, server, support
-Stable tag: 1.0.2
-License: GPLv3
+Stable tag: 1.1.0
+License: MIT
 Requires at least: 2.3.0
-Tested up to: 4.6
+Tested up to: 4.7
 
 Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 
@@ -21,7 +21,7 @@ I always disliked the fact that WordPress does not display the current version n
 
 If you are a plugin developer and a user experiences a problem, they could install this plugin and send you a screenshot of their admin footer (or copy the text of course) to inform you about the cornerstones of their setup.
 
-I built this [Multivariate Virtual Machine for Debugging WordPress Plugin](https://github.com/alpipego/wp-version) that allows you to quickly change PHP versions, the used web server (Nginx or Apache) and WordPress core, plugin and theme versions. As it is intended to quickly change environment variables, this plugin helped me keep track of what exactly I am testing at the moment.
+I built this [Multivariate Virtual Machine for Debugging WordPress Plugin](https://github.com/alpipego/wp-version) that allows you to quickly change PHP versions, the used web server (nginx or Apache) and WordPress core, plugin and theme versions. As it is intended to quickly change environment variables, this plugin helped me keep track of what exactly I am testing at the moment.
 
 == Screenshots ==
 
@@ -32,5 +32,5 @@ I built this [Multivariate Virtual Machine for Debugging WordPress Plugin](https
 
 == Installation ==
 
-1. Upload the plugin to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin to your plugins directory (possibly `/wp-content/plugins/`), or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress

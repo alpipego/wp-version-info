@@ -1,0 +1,14 @@
+{
+    "name": "alpipego/version-info",
+    "description": "WordPress micro-plugin to show version info in admin footer",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alpipego",
+            "email": "alpipego@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

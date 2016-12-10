@@ -2,7 +2,7 @@
 Contributors: alpipego
 Tags: admin, version, php, mysql, server, support
 Stable tag: 1.0.2
-License: GPLv3
+License: MIT
 Requires at least: 2.3.0
 Tested up to: 4.6
 

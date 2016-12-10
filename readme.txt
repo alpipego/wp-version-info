@@ -1,7 +1,7 @@
 === Version Info ===
 Contributors: alpipego
 Tags: admin, version, php, mysql, server, support
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: MIT
 Requires at least: 2.3.0
 Tested up to: 4.7

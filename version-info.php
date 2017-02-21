@@ -22,7 +22,10 @@
 // pseudo namespace
 class VersionInfo {
 
-	public function __construct() {
+	private $db;
+
+	public function __construct( \wpdb $wpdb ) {
+		$this->db = $wpdb;
 		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
 		add_filter( 'update_footer', array( $this, 'version_in_footer' ), 11 );
 	}
@@ -35,12 +38,9 @@ class VersionInfo {
 		$update     = core_update_footer();
 		$wp_version = strpos( $update, '<strong>' ) === 0 ? get_bloginfo( 'version' ) . ' (' . $update . ')' : get_bloginfo( 'version' );
 
-		$mysqli       = new mysqli( DB_HOST, DB_USER, DB_PASSWORD );
-		$mysql_server = explode( '-', mysqli_get_server_info( $mysqli ) );
-		$mysqli->close();
-
-		return sprintf( esc_attr__( 'You are running WordPress %s  | PHP %s | %s | MySQL %s', 'version-info' ), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $mysql_server[0] );
+		return sprintf( esc_attr__( 'You are running WordPress %s  | PHP %s | %s | MySQL %s', 'version-info' ), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $this->db->get_var('SELECT VERSION();') );
 	}
 }
 
-new VersionInfo();
+global $wpdb;
+new VersionInfo( $wpdb );

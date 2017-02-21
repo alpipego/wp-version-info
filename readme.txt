@@ -1,10 +1,10 @@
 === Version Info ===
 Contributors: alpipego
 Tags: admin, version, php, mysql, server, support
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: MIT
 Requires at least: 2.3.0
-Tested up to: 4.7
+Tested up to: 4.7.2
 
 Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 

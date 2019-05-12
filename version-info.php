@@ -4,7 +4,7 @@
  *
  * @package     wp-version-info
  * @author      Alexander Goller <alpipego@gmail.com>
- * @copyright   2016 Alexander Goller
+ * @copyright   2019 Alexander Goller
  * @license     MIT
  *
  * @wordpress-plugin

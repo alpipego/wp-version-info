@@ -4,7 +4,7 @@
  *
  * @package     wp-version-info
  * @author      Alexander Goller <alpipego@gmail.com>
- * @copyright   2016 Alexander Goller
+ * @copyright   2019 Alexander Goller
  * @license     MIT
  *
  * @wordpress-plugin
@@ -14,7 +14,7 @@
  * Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer
  * Author: alpipego
  * Author URI: http://alpipego.com/
- * Version: 1.1.4
+ * Version: 1.1.5
  * License: MIT
  * GitHub Plugin URI: https://github.com/alpipego/wp-version-info
  * Text Domain: version-info

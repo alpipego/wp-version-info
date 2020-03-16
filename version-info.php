@@ -24,7 +24,7 @@ class VersionInfo {
 
 	private $db;
 
-	public function __construct( \wpdb $wpdb ) {
+	public function __construct( wpdb $wpdb ) {
 		$this->db = $wpdb;
 		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
 		add_filter( 'update_footer', array( $this, 'version_in_footer' ), 11 );

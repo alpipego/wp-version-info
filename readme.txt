@@ -4,7 +4,7 @@ Tags: admin, version, php, mysql, server, support
 Stable tag: 1.1.5
 License: MIT
 Requires at least: 2.3.0
-Tested up to: 5.3.2
+Tested up to: 5.4.0
 
 Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 

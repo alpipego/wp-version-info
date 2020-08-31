@@ -14,7 +14,7 @@
  * Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer
  * Author: alpipego
  * Author URI: http://alpipego.com/
- * Version: 1.1.6
+ * Version: 1.2.0
  * License: MIT
  * GitHub Plugin URI: https://github.com/alpipego/wp-version-info
  * Text Domain: version-info
@@ -38,7 +38,14 @@ class VersionInfo {
 		$update     = core_update_footer();
 		$wp_version = strpos( $update, '<strong>' ) === 0 ? get_bloginfo( 'version' ) . ' (' . $update . ')' : get_bloginfo( 'version' );
 
-		return sprintf( esc_attr__( 'You are running WordPress %s  | PHP %s | %s | MySQL %s', 'version-info' ), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $this->db->get_var('SELECT VERSION();') );
+		$footer = sprintf( esc_attr__( 'You are running WordPress %s | PHP %s | %s | MySQL %s', 'version-info' ), $wp_version, phpversion(), $_SERVER['SERVER_SOFTWARE'], $this->db->get_var('SELECT VERSION();') );
+
+		putenv('WP_ENVIRONMENT_TYPE=staging');
+		if ((getenv('WP_ENVIRONMENT_TYPE') || defined('WP_ENVIRONMENT_TYPE')) && function_exists('wp_get_environment_type')) {
+            $footer .= sprintf(' | Environment <code>%s</code>', wp_get_environment_type());
+        }
+
+		return $footer;
 	}
 }
 

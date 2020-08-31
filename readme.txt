@@ -34,12 +34,10 @@ If you are a plugin developer and a user experiences a problem, they could insta
 
 `common.css` hides the admin-footer on viewports smaller than 783px. To show the footer also on small viewports, add the following to a mu-plugin or your theme's functions.php, etc.
 
-```
-add_action('admin_enqueue_scripts', function () {
-    wp_add_inline_style('common', '@media screen and (max-width: 782px){#wpfooter {display: block;}}');
-    wp_add_inline_style('admin-menu', '@media only screen and (max-width: 960px){.auto-fold #wpfooter{margin-left: 0px;}}');
-});
-```
+    add_action('admin_enqueue_scripts', function () {
+        wp_add_inline_style('common', '@media screen and (max-width: 782px){#wpfooter {display: block;}}');
+        wp_add_inline_style('admin-menu', '@media only screen and (max-width: 960px){.auto-fold #wpfooter{margin-left: 0px;}}');
+    });
 
 == Installation ==
 

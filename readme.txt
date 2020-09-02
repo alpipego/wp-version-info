@@ -1,7 +1,7 @@
 === Version Info ===
 Contributors: alpipego
 Tags: admin, version, php, mysql, server, support
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: MIT
 Requires at least: 2.3.0
 Tested up to: 5.5
@@ -45,6 +45,10 @@ If you are a plugin developer and a user experiences a problem, they could insta
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Changelog ==
+
+= 1.2.1 =
+
+* remove putenv to staging 🤦
 
 = 1.2.0 =
 

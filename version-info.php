@@ -39,7 +39,7 @@ class VersionInfo {
         }
 
         $footer = sprintf(
-            esc_attr__('You are running WordPress %s | PHP %s | %s | MySQL %s', 'version-info'),
+            esc_attr__('You are running WordPress %s | PHP %s | Server %s | MySQL %s', 'version-info'),
             $wp_version,
             phpversion(),
             sanitize_text_field($_SERVER['SERVER_SOFTWARE']),

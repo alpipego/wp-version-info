@@ -14,7 +14,7 @@
  * Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer
  * Author: alpipego
  * Author URI: http://alpipego.com/
- * Version: 1.2.1
+ * Version: 1.3.0
  * License: MIT
  * GitHub Plugin URI: https://github.com/alpipego/wp-version-info
  * Text Domain: version-info

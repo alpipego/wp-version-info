@@ -1,10 +1,10 @@
 === Version Info ===
-Contributors: alpipego
+Contributors: alpipego, gauchoplugins
 Tags: admin, version, php, mysql, server, support
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: MIT
 Requires at least: 2.3.0
-Tested up to: 6.4
+Tested up to: 6.6
 
 Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 
@@ -45,6 +45,10 @@ If you are a plugin developer and a user experiences a problem, they could insta
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Changelog ==
+
+= 1.3.0 =
+
+Due to the current tumult surrounding the .org repository, I have decided to put this plugin up for adoption. With this update, it has been successfully transferred to the new owner, @gauchoplugins. All future updates and maintenance will be handled by the new owner. Thank you for your support and understanding.
 
 = 1.2.1 =
 

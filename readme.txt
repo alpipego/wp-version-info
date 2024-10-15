@@ -1,10 +1,10 @@
 === Version Info | Show WP, PHP, MySQL & Web Server Versions in Admin Footer ===
 Contributors: gauchoplugins, alpipego
 Tags: admin, version, php, mysql, server
-Stable tag: 1.3.1
-Requires at least: 6.0
+Stable tag: 1.3.2
+Requires at least: 4.6
 Tested up to: 6.7
-Requires PHP: 7.0
+Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -49,7 +49,7 @@ If you are a plugin developer and a user experiences a problem, they could insta
 
 == Changelog ==
 
-= 1.3.1 = 
+= 1.3.2 = 
 
-* Updated compatibility details. 
-* Changed to GPL. 
+* Added optional Screen Element/Widget in Screen Options, which is deactivated by default for users who are upgrading from v1.3.1 or earlier. 
+* Added namespace, sanitization, and other security improvements. 

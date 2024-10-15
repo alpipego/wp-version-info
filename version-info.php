@@ -25,7 +25,7 @@ class VersionInfo {
     }
 
     public function load_text_domain() {
-        load_plugin_textdomain('version-info');
+        load_plugin_textdomain('version-info', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 
     public function version_in_footer() {
@@ -35,11 +35,11 @@ class VersionInfo {
         // Fetch MySQL version with error handling
         $mysql_version = $this->db->get_var('SELECT VERSION()');
         if (is_wp_error($mysql_version)) {
-            $mysql_version = 'Error fetching version';
+            $mysql_version = __('Error fetching version', 'version-info');
         }
 
         $footer = sprintf(
-            esc_attr__('You are running WordPress %s | PHP %s | Server %s | MySQL %s', 'version-info'),
+            esc_attr__('You are running WordPress %s | PHP %s | Web Server %s | MySQL %s', 'version-info'),
             $wp_version,
             phpversion(),
             sanitize_text_field($_SERVER['SERVER_SOFTWARE']),
@@ -48,7 +48,7 @@ class VersionInfo {
 
         // Check for the environment type safely
         if ((getenv('WP_ENVIRONMENT_TYPE') || defined('WP_ENVIRONMENT_TYPE')) && function_exists('wp_get_environment_type')) {
-            $footer .= sprintf(' | Environment <code>%s</code>', wp_get_environment_type());
+            $footer .= sprintf(' | ' . __('Environment <code>%s</code>', 'version-info'), wp_get_environment_type());
         }
 
         return $footer;
@@ -116,7 +116,7 @@ function add_version_info_dashboard_widget() {
     if (current_user_can('manage_options')) {
         wp_add_dashboard_widget(
             'version_info_dashboard_widget', // Widget slug
-            'Version Info',                  // Title
+            __('Version Info', 'version-info'), // Title
             'GauchoPlugins\VersionInfo\display_version_info' // Display callback function
         );
     }
@@ -134,9 +134,9 @@ function display_version_info() {
 
     // Display the version info in the widget
     echo '<ul>';
-    echo '<li><strong>WordPress Version:</strong> ' . esc_html($wp_version) . '</li>';
-    echo '<li><strong>PHP Version:</strong> ' . esc_html($php_version) . '</li>';
-    echo '<li><strong>Web Server:</strong> ' . esc_html($server_software) . '</li>';
-    echo '<li><strong>MySQL Version:</strong> ' . esc_html($mysql_version) . '</li>';
+    echo '<li><strong>' . __('WordPress Version:', 'version-info') . '</strong> ' . esc_html($wp_version) . '</li>';
+    echo '<li><strong>' . __('PHP Version:', 'version-info') . '</strong> ' . esc_html($php_version) . '</li>';
+    echo '<li><strong>' . __('Web Server:', 'version-info') . '</strong> ' . esc_html($server_software) . '</li>';
+    echo '<li><strong>' . __('MySQL Version:', 'version-info') . '</strong> ' . esc_html($mysql_version) . '</li>';
     echo '</ul>';
 }

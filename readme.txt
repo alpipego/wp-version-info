@@ -53,3 +53,4 @@ If you are a plugin developer and a user experiences a problem, they could insta
 
 * Added optional Screen Element/Widget in Screen Options, which is deactivated by default for users who are upgrading from v1.3.1 or earlier. 
 * Added namespace, sanitization, and other security improvements. 
+* Prepared plugin strings for translation. 

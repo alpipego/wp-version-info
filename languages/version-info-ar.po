@@ -1,0 +1,71 @@
+# Copyright (C) 2024 Gaucho Plugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Version Info 1.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/version-info\n"
+"Last-Translator: Brandon Ernst <support@gauchoplugins.com>\n"
+"Language-Team: Arabic <(nothing)>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-15T15:32:56+00:00\n"
+"PO-Revision-Date: 2024-10-15 20:04+0400\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: version-info\n"
+"Language: ar\n"
+
+#. Plugin Name of the plugin
+#: version-info.php version-info.php:121
+msgid "Version Info"
+msgstr "معلومات النسخة"
+
+#. Plugin URI of the plugin
+#: version-info.php
+msgid "https://wordpress.org/plugins/version-info"
+msgstr "https://wordpress.org/plugins/version-info"
+
+#. Description of the plugin
+#: version-info.php
+msgid ""
+"Show current WordPress, PHP, Web Server, and MySQL versions in admin footer."
+msgstr "عرض إصدار WordPress الحالي وPHP وخادم الويب وMySQL في تذييل الإدارة."
+
+#. Author of the plugin
+#: version-info.php
+msgid "Gaucho Plugins"
+msgstr "إضافات غاوتشو"
+
+#. Author URI of the plugin
+#: version-info.php
+msgid "https://gauchoplugins.com"
+msgstr "https://gauchoplugins.com"
+
+#: version-info.php:38
+msgid "Error fetching version"
+msgstr "خطأ في جلب الإصدار"
+
+#: version-info.php:43
+msgid "You are running WordPress %s | PHP %s | Web Server %s | MySQL %s"
+msgstr "أنت تستخدم WordPress %s | PHP %s | خادم الويب %s | MySQL %s"
+
+#. Translators: %s is the environment type.
+#: version-info.php:53
+msgid "Environment <code>%s</code>"
+msgstr "البيئة <code>%s</code>"
+
+#: version-info.php:139
+msgid "WordPress Version:"
+msgstr "إصدار WordPress:"
+
+#: version-info.php:140
+msgid "PHP Version:"
+msgstr "إصدار PHP:"
+
+#: version-info.php:141
+msgid "Web Server:"
+msgstr "خادم الويب:"
+
+#: version-info.php:142
+msgid "MySQL Version:"
+msgstr "إصدار MySQL:"

@@ -1,0 +1,72 @@
+# Copyright (C) 2024 Gaucho Plugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Version Info 1.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/version-info\n"
+"Last-Translator: Brandon Ernst <support@gauchoplugins.com>\n"
+"Language-Team: Spanish <es@tp.org.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-10-15T15:32:56+00:00\n"
+"PO-Revision-Date: 2024-10-15 20:04+0400\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: version-info\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+#: version-info.php version-info.php:121
+msgid "Version Info"
+msgstr "Información de Versión"
+
+#. Plugin URI of the plugin
+#: version-info.php
+msgid "https://wordpress.org/plugins/version-info"
+msgstr "https://wordpress.org/plugins/version-info"
+
+#. Description of the plugin
+#: version-info.php
+msgid ""
+"Show current WordPress, PHP, Web Server, and MySQL versions in admin footer."
+msgstr "Mostrar las versiones actuales de WordPress, PHP, servidor web y MySQL en el pie de página del administrador."
+
+#. Author of the plugin
+#: version-info.php
+msgid "Gaucho Plugins"
+msgstr "Gaucho Plugins"
+
+#. Author URI of the plugin
+#: version-info.php
+msgid "https://gauchoplugins.com"
+msgstr "https://gauchoplugins.com"
+
+#: version-info.php:38
+msgid "Error fetching version"
+msgstr "Error al obtener la versión"
+
+#: version-info.php:43
+msgid "You are running WordPress %s | PHP %s | Web Server %s | MySQL %s"
+msgstr "Estás utilizando WordPress %s | PHP %s | Servidor web %s | MySQL %s"
+
+#. Translators: %s is the environment type.
+#: version-info.php:53
+msgid "Environment <code>%s</code>"
+msgstr "Entorno <code>%s</code>"
+
+#: version-info.php:139
+msgid "WordPress Version:"
+msgstr "Versión de WordPress:"
+
+#: version-info.php:140
+msgid "PHP Version:"
+msgstr "Versión de PHP:"
+
+#: version-info.php:141
+msgid "Web Server:"
+msgstr "Servidor web:"
+
+#: version-info.php:142
+msgid "MySQL Version:"
+msgstr "Versión de MySQL:"

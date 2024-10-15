@@ -1,0 +1,11 @@
+= 1.3.0 =
+
+Due to the current tumult surrounding the .org repository, I have decided to put this plugin up for adoption. With this update, it has been successfully transferred to the new owner, @gauchoplugins. All future updates and maintenance will be handled by the new owner. Thank you for your support and understanding.
+
+= 1.2.1 =
+
+* remove putenv to staging 🤦
+
+= 1.2.0 =
+
+* If WP_ENVIRONMENT_TYPE is defined (either through PHP env var or constant), display this info.

@@ -1,22 +1,13 @@
 <?php
 /**
- * WordPress Version Info
- *
- * @package     wp-version-info
- * @author      Alexander Goller <alpipego@gmail.com>
- * @copyright   2019 Alexander Goller
- * @license     MIT
- *
- * @wordpress-plugin
- *
  * Plugin Name: WordPress Version Info
  * Plugin URI: https://wordpress.org/plugins/version-info
  * Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer
  * Author: alpipego
  * Author URI: http://alpipego.com/
- * Version: 1.3.0
- * License: MIT
- * GitHub Plugin URI: https://github.com/alpipego/wp-version-info
+ * Version: 1.3.1
+ * License: GPLv3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: version-info
  */
 // pseudo namespace

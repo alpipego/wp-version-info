@@ -1,14 +1,16 @@
-=== Version Info ===
-Contributors: alpipego, gauchoplugins
-Tags: admin, version, php, mysql, server, support
-Stable tag: 1.3.0
-License: MIT
+=== Version Info | Show WP, PHP, MySQL & Web Server Versions in Admin Footer ===
+Contributors: gauchoplugins, alpipego
+Tags: admin, version, php, mysql, server
+Stable tag: 1.3.1
 Requires at least: 2.3.0
-Tested up to: 6.6
+Tested up to: 6.7
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Show current WordPress, PHP, Web Server and MySQL versions in admin footer
 
 == Description ==
+
 This plugin displays the current WordPress version number along with the following environment in the admin footer:
 
 * Current WordPress version info, if there is an update available it displays the current and latest versions side by side
@@ -46,14 +48,6 @@ If you are a plugin developer and a user experiences a problem, they could insta
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.3.1 = 
 
-Due to the current tumult surrounding the .org repository, I have decided to put this plugin up for adoption. With this update, it has been successfully transferred to the new owner, @gauchoplugins. All future updates and maintenance will be handled by the new owner. Thank you for your support and understanding.
-
-= 1.2.1 =
-
-* remove putenv to staging 🤦
-
-= 1.2.0 =
-
-* If WP_ENVIRONMENT_TYPE is defined (either through PHP env var or constant), display this info.
+* Updated compatibility details. 

@@ -111,14 +111,14 @@ function display_version_info() {
     // Get server info
     $wp_version = get_bloginfo('version');         // WordPress version
     $php_version = phpversion();                   // PHP version
-    $mysql_version = $wpdb->db_version();          // MySQL version
     $server_software = sanitize_text_field($_SERVER['SERVER_SOFTWARE']); // Sanitize Web Server info
+    $mysql_version = $wpdb->db_version();          // MySQL version
 
     // Display the version info in the widget
     echo '<ul>';
     echo '<li><strong>WordPress Version:</strong> ' . esc_html($wp_version) . '</li>';
     echo '<li><strong>PHP Version:</strong> ' . esc_html($php_version) . '</li>';
-    echo '<li><strong>MySQL Version:</strong> ' . esc_html($mysql_version) . '</li>';
     echo '<li><strong>Web Server:</strong> ' . esc_html($server_software) . '</li>';
+    echo '<li><strong>MySQL Version:</strong> ' . esc_html($mysql_version) . '</li>';
     echo '</ul>';
 }

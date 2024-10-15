@@ -55,3 +55,4 @@ If you are a plugin developer and a user experiences a problem, they could insta
 * Added namespace, sanitization, and other security improvements. 
 * Prepared plugin strings for translation. 
 * Translations added for 13 most common Wordpress languages. 
+* Limited display of version info to administrators only. 

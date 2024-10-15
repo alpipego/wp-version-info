@@ -3,7 +3,7 @@
  * Plugin Name: Version Info
  * Plugin URI: https://wordpress.org/plugins/version-info
  * Description: Show current WordPress, PHP, Web Server and MySQL versions in admin footer. 
- * Author: gauchoplugins
+ * Author: Gaucho Plugins
  * Author URI: http://gauchoplugins.com
  * Version: 1.3.1
  * License: GPLv3

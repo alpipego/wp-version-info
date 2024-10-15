@@ -51,3 +51,4 @@ If you are a plugin developer and a user experiences a problem, they could insta
 = 1.3.1 = 
 
 * Updated compatibility details. 
+* Changed to GPL. 

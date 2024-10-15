@@ -38,6 +38,7 @@ class VersionInfo {
             $mysql_version = __('Error fetching version', 'version-info');
         }
 
+        // Translators: %s are the WordPress version, PHP version, server info, and MySQL version respectively.
         $footer = sprintf(
             esc_attr__('You are running WordPress %s | PHP %s | Web Server %s | MySQL %s', 'version-info'),
             $wp_version,
@@ -48,6 +49,7 @@ class VersionInfo {
 
         // Check for the environment type safely
         if ((getenv('WP_ENVIRONMENT_TYPE') || defined('WP_ENVIRONMENT_TYPE')) && function_exists('wp_get_environment_type')) {
+            // Translators: %s is the environment type.
             $footer .= sprintf(' | ' . __('Environment <code>%s</code>', 'version-info'), wp_get_environment_type());
         }
 

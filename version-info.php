@@ -29,15 +29,20 @@ class VersionInfo {
     }
 
     public function version_in_footer() {
+        // Check if the current user has the 'administrator' role
+        if (!current_user_can('administrator')) {
+            return ''; // Do not display anything for non-admin users
+        }
+    
         $update = core_update_footer();
         $wp_version = strpos($update, '<strong>') === 0 ? get_bloginfo('version') . ' (' . $update . ')' : get_bloginfo('version');
-
+    
         // Fetch MySQL version with error handling
         $mysql_version = $this->db->get_var('SELECT VERSION()');
         if (is_wp_error($mysql_version)) {
             $mysql_version = __('Error fetching version', 'version-info');
         }
-
+    
         // Translators: %s are the WordPress version, PHP version, server info, and MySQL version respectively.
         $footer = sprintf(
             esc_attr__('You are running WordPress %s | PHP %s | Web Server %s | MySQL %s', 'version-info'),
@@ -46,13 +51,13 @@ class VersionInfo {
             sanitize_text_field($_SERVER['SERVER_SOFTWARE']),
             esc_html($mysql_version)
         );
-
+    
         // Check for the environment type safely
         if ((getenv('WP_ENVIRONMENT_TYPE') || defined('WP_ENVIRONMENT_TYPE')) && function_exists('wp_get_environment_type')) {
             // Translators: %s is the environment type.
             $footer .= sprintf(' | ' . __('Environment <code>%s</code>', 'version-info'), wp_get_environment_type());
         }
-
+    
         return $footer;
     }
 }
@@ -114,8 +119,8 @@ add_action('wp_dashboard_setup', 'GauchoPlugins\VersionInfo\add_version_info_das
 
 // Function to register the dashboard widget
 function add_version_info_dashboard_widget() {
-    // Check if the current user has the 'manage_options' capability (Admins)
-    if (current_user_can('manage_options')) {
+    // Check if the current user has the 'administrator' role
+    if (current_user_can('administrator')) {
         wp_add_dashboard_widget(
             'version_info_dashboard_widget', // Widget slug
             __('Version Info', 'version-info'), // Title
@@ -126,6 +131,11 @@ function add_version_info_dashboard_widget() {
 
 // Function to display the version information in the dashboard widget
 function display_version_info() {
+    // Check if the current user has the 'administrator' role
+    if (!current_user_can('administrator')) {
+        return; // Do not display anything for non-admin users
+    }
+
     global $wpdb;
 
     // Get server info

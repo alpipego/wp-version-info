@@ -70,15 +70,24 @@ function vidw_plugin_activation() {
         update_option('vidw_plugin_version', '1.3.2'); // Updated version to match the current release
     }
 
-    // Redirect to the WordPress Dashboard
-    if ( ! is_admin() ) {
-        return; // Prevent redirecting when not in admin area
+    // Redirect to the dashboard after activation
+    if (is_admin()) {
+        // Add a transient to prevent immediate redirect loop
+        set_transient('vidw_plugin_activation_redirect', true, 30);
     }
-
-    // Use wp_redirect to send the user to the dashboard
-    wp_redirect(admin_url()); // Redirect to the main dashboard
-    exit; // Exit to prevent further execution
 }
+
+// Check for redirection after activation
+add_action('admin_init', function() {
+    // Check if the transient is set
+    if (get_transient('vidw_plugin_activation_redirect')) {
+        // Remove the transient
+        delete_transient('vidw_plugin_activation_redirect');
+        // Redirect to the dashboard
+        wp_redirect(admin_url());
+        exit; // Stop further execution
+    }
+});
 
 // Function to check for previous users of the plugin (who updated from an older version)
 function vidw_check_previous_user() {

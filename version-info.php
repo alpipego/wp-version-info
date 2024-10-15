@@ -69,6 +69,15 @@ function vidw_plugin_activation() {
     if (!get_option('vidw_plugin_version')) {
         update_option('vidw_plugin_version', '1.3.2'); // Updated version to match the current release
     }
+
+    // Redirect to the WordPress Dashboard
+    if ( ! is_admin() ) {
+        return; // Prevent redirecting when not in admin area
+    }
+
+    // Use wp_redirect to send the user to the dashboard
+    wp_redirect(admin_url()); // Redirect to the main dashboard
+    exit; // Exit to prevent further execution
 }
 
 // Function to check for previous users of the plugin (who updated from an older version)
